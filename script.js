@@ -53,9 +53,11 @@ function castVote(party) {
     message.textContent = `You voted for ${party.toUpperCase()}.`;
     votingSection.style.display = "none"; // Hide voting section
 
-    // Re-enable the Voter ID input field so the user can enter it again for the next vote
+    // Clear the Voter ID input field and re-enable it for the next voter
+    document.getElementById("voterIdInput").value = "";
     document.getElementById("voterIdInput").disabled = false;
 }
+
 
 showResultsButton.addEventListener("click", () => {
     const isResultsVisible = resultsSection.style.display === "block";
