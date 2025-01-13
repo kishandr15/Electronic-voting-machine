@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Machine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="machine">
+        <h1 class="title">Electronic Voting Machine</h1>
+
+        <!-- Input Field for Voter ID -->
+        <input type="text" id="voterIdInput" placeholder="Enter Voter ID" />
+        <button id="submitVoterId">Submit</button>
+        <p id="message" class="message"></p>
+
+        <!-- Voting Section -->
+        <div id="votingSection" class="voting-grid" style="display: none;">
+            <div class="party">
+                <img class="party-logo" src="images/bjp.jpg" alt="BJP">
+                <span class="party-name">BJP</span>
+                <button id="bjpVote" class="vote-button">Vote</button>
+            </div>
+
+            <div class="party">
+                <img class="party-logo" src="images/congress.png" alt="Congress">
+                <span class="party-name">Congress</span>
+                <button id="congressVote" class="vote-button">Vote</button>
+            </div>
+
+            <div class="party">
+                <img class="party-logo" src="images/jds.png" alt="JDS">
+                <span class="party-name">JDS</span>
+                <button id="jdsVote" class="vote-button">Vote</button>
+            </div>
+
+            <div class="party">
+                <img class="party-logo" src="images/nota.png" alt="NOTA">
+                <span class="party-name">NOTA</span>
+                <button id="notaVote" class="vote-button">Vote</button>
+            </div>
+        </div>
+
+        <!-- Show Results Button -->
+        <button id="showResults" class="results-button" style="display: none;">Show Results</button>
+
+        <!-- Reset Votes Button -->
+        <button id="resetVotes" class="reset-button" style="display: none;">Reset Votes</button>
+
+
+        <!-- Results Section -->
+        <div id="resultsSection" style="display: none;">
+            <h2>Results</h2>
+            <table id="resultsTable" class="results-table"></table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
